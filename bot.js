@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const Browser = require('zombie');
 //const client = new Discord.Client();
 const config = require("./config.json");
+const token = process.env.token;
 
 const bot = new Discord.Client({disableEveryone: true});
 
@@ -119,4 +120,4 @@ bot.on("message", async message =>{
     }
 });
 
-bot.login(config.token);
+bot.login(token);
